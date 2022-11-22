@@ -1,0 +1,28 @@
+<hr>
+
+<table class="table bg-dark text-light">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col"> FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Maiden name</th>
+        <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-mail</th>
+        <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;Phone</th>
+        <th scope="col">Age</th>
+        <th scope="col">&nbsp;&nbsp;&nbsp;Birth</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of UserList | userFilter : searchTerm : 'firstName' " >
+      <tr>
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.maidenName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.birthDate}}</td>
+      </tr>
+    </tbody>
+  </table>
